@@ -20,13 +20,13 @@ function UseFormStatusReact19() {
     console.log(result);
   };
   return (
-    <>
+    <div>
       <h2>Use Form Status React 19</h2>
       <form action={formAction}>
         <input type="text" name="name" />
         <Submit />
       </form>
-    </>
+    </div>
   );
 }
 
