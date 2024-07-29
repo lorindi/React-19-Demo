@@ -9,6 +9,7 @@ const createTodo = (title) =>
   );
 
 function UseOptimisticReact19() {
+
   const [todos, setTodos] = useState([
     { id: 1, title: "Clean" },
     { id: 2, title: "Study" },
@@ -25,7 +26,7 @@ function UseOptimisticReact19() {
       }
       setOptimisticTodos(prevTodos => [
         ...prevTodos,
-        { title, id: createUniqueId(), pending: true  },
+        { title: title + '...', id: createUniqueId(), pending: true  },
       ]);
 
       const newTodo = await createTodo(title);
