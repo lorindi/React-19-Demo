@@ -10,11 +10,12 @@ import UseTransitionReact19 from "./components/useTransition/UseTransitionReact1
 import UseActionStatePrevVersion from "./components/useActionState/UseActionStatePrevVersion";
 import UseActionStateReact19 from "./components/useActionState/UseActionStateReact19";
 
-
 import UseOptimisticPrevVersion from "./components/useOptimistic/useOptimisticPresVersion";
 import UseOptimisticReact19 from "./components/useOptimistic/useOptimisticReact19";
 
-import './App.css'
+import "./App.css";
+import UseHookPrevVersion from "./components/useHook/UseHookPrevVersion";
+import UseHookReact19 from "./components/useHook/UseHookReact19";
 
 function App() {
   return (
@@ -38,6 +39,10 @@ function App() {
       <div className="containerDemo">
         <UseOptimisticPrevVersion />
         <UseOptimisticReact19 />
+      </div>
+      <div className="containerDemo">
+        <UseHookPrevVersion />
+        <UseHookReact19 />
       </div>
     </div>
   );
