@@ -16,13 +16,13 @@ function UseTransitionPrevVersion() {
     e.target.reset();
   };
   return (
-    <>
+    <div>
       <h2>Use Transition Prev Version</h2>
       <form onSubmit={handleSubmit}>
         <input type="text" name="name" />
         <button disabled={isPending}>Update</button>
       </form>
-    </>
+    </div>
   );
 }
 
