@@ -7,7 +7,7 @@ const createTodo = (title) =>
     setTimeout(() => resolve({ id: createUniqueId(), title}))
   );
 
-function UseOptimisticPresVersion() {
+function UseOptimisticPrevVersion() {
   const [todos, setTodos] = useState([
     { id: 1, title: "Clean" },
     { id: 2, title: "Study" },
@@ -30,7 +30,7 @@ function UseOptimisticPresVersion() {
 
   return (
     <div>
-      <h2>UseOptimisticPresVersion</h2>
+      <h2>Use Optimistic Prev Version</h2>
       <form action={formAction}>
         <input type="text" name="name" />
         <button type="submit" disabled={isPending}>
@@ -49,4 +49,4 @@ function UseOptimisticPresVersion() {
   );
 }
 
-export default UseOptimisticPresVersion;
+export default UseOptimisticPrevVersion;
