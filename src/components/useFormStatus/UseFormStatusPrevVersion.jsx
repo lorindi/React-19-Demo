@@ -24,13 +24,13 @@ function UseFormStatusPrevVersion() {
     e.target.reset();
   };
   return (
-    <>
+    <div>
       <h2>Use Form Status Prev Version</h2>
       <form onSubmit={submitHandler}>
         <input type="text" name="name" />
         <Submit pending={pending} />
       </form>
-    </>
+    </div>
   );
 }
 
