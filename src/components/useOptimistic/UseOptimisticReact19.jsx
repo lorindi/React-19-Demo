@@ -1,11 +1,11 @@
 import { useActionState, useState, useOptimistic } from "react";
-// import uniqid from "uniqid";
 
-const createUniqueId = () => "_" + Math.random().toString(36).substr(2, 9);
+const createUniqueId = () => "1" + Math.random().toString(36);
+console.log(createUniqueId());
 
 const createTodo = (title) =>
-  new Promise((resolve) =>
-    setTimeout(() => resolve({ id: createUniqueId(), title: "" }))
+  new Promise(resolve =>
+    setTimeout(() => resolve({ id: createUniqueId(), title}),2000)
   );
 
 function UseOptimisticReact19() {
@@ -21,11 +21,11 @@ function UseOptimisticReact19() {
       const title = formData.get("name");
 
       if (!title) {
-        return "Title ir required";
+        return "Title is required";
       }
-      setOptimisticTodos((prevTodos) => [
+      setOptimisticTodos(prevTodos => [
         ...prevTodos,
-        { title: title + '...', id: createUniqueId() },
+        { title, id: createUniqueId(), pending: true  },
       ]);
 
       const newTodo = await createTodo(title);
