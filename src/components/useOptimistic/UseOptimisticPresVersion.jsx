@@ -1,11 +1,10 @@
 import { useActionState, useState } from "react";
-// import uniqid from "uniqid";
 
 const createUniqueId = () => '_' + Math.random().toString(36).substr(2, 9);
 
 const createTodo = (title) =>
   new Promise((resolve) =>
-    setTimeout(() => resolve({ id: createUniqueId(), title: "" }))
+    setTimeout(() => resolve({ id: createUniqueId(), title}))
   );
 
 function UseOptimisticPresVersion() {
@@ -41,7 +40,7 @@ function UseOptimisticPresVersion() {
       {error && <p>{error}</p>}
       <ul>
         {todos.map((todo) => (
-          <li key={todo.id} style={todo.pending && { color: "gray" }}>
+          <li key={todo.id} style={todo.pending && { color: "green" }}>
             {todo.title}
           </li>
         ))}
